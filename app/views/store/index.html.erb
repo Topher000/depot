@@ -3,6 +3,9 @@
 <% end %>
 
 <h1>Your Progmatic Catalog</h1>
+<% if @visit_count > 5 %>
+    <p>You have visited this site <%= pluralize @visit_count, 'time' %>.</p>
+<% end %>
 
 <ul class="catalog">
     <% cache @products do %>
